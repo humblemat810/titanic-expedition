@@ -1,0 +1,47 @@
+{
+  "name": "titanic-expedition",
+  "version": "0.1.0",
+  "description": "Mode-aware schema projection for TypeScript, inspired by pydantic-extension.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist coverage .vitest-cache",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepack": "npm run clean && npm run test && npm run build"
+  },
+  "keywords": [
+    "typescript",
+    "zod",
+    "schema",
+    "projection",
+    "governance",
+    "llm",
+    "serialization"
+  ],
+  "author": "OpenAI",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "vitest": "^4.0.0",
+    "zod": "^4.0.0"
+  }
+}
